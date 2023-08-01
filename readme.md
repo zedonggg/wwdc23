@@ -1,0 +1,14 @@
+# MealMind
+#### Video Demo: "https://youtu.be/C9zdDitgKqA"
+#### Description:
+Hello! My CS50 final project is an app called MealMind. It is built in swift playgrounds based on SwiftUI as the language. I will be submitting this same app for Apple's WWDC2023 Swift Student Challenge. My original idea for the app was to build a simple informative app that provides information to the user on healthy eating habits as well as some fun facts, and include a small minigame using coreML to identify if the user took pictures of a specific food item such as an apple. However, I had some challenges implementing the ML algorithmn within swift playgrounds so it was scrapped for a simpler photo-taking minigame. If time permits, I would like to revisit this, but for now this will do.
+
+Inside the project folder, I have included all the source files for the app as well as the swift playgrounds file for the app itself.
+
+Under myApp and ContentView, these are default templates generated to setup the view to the user when they open the app.
+
+Under the storyPage.swift file, this includes all the structs for the simple views that provide information to the user. I nested the content within a NavigationView() and used NavigationLink{} buttons to navigate between the pages. These use simple style modifiers like foregroundColor() or cornerRadius() to apply styling to the elements. I really liked how similar these are in concept to CSS and HTML and found it easy to pick up. One of the more interesting implementations is the Page6 viewStruct where I implemented a variable funFacts that stores an array of strings of fun facts, and randomly cycles between them when a button is pressed.
+
+The scanApple, scanBanana and scanBroccoli swift files include the viewStructs for taking a picture of the specified fruit/veggie using either the iPhone's camera or by selecting an image from the library. A boolean var isPresenting is used to determine whether or not to show the library/camera view depending on if the button is pressed, so it is false initially then toggles to true when the button is pressed using the .onTapGesture. The imagePicker file handles the implementation of selecting an image, and then coordinating it and selecting the image and setting it to the UIImage variable. This is then passed back to the viewStruct and displayed on the phone. The @State property allows the variable to update dynamically so that new images are automatically reflected on the view.
+
+This was an interesting experience for me as I learnt all of these from scratch in under 3 days to rush the submission in time for Apple's deadline. It would be great if Swift could be taught under CS50 as well as the documentation was quite difficult to understand. I enjoyed the challenge and I look forward to other projects that I will be doing in the future. Cheers!
